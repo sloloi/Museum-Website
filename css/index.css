@@ -1,0 +1,269 @@
+@font-face {
+  font-family: 'PullmanLayerOT';
+  src: url("./../assets/fonts/PullmanLayerOT.otf");
+}
+@font-face {
+  font-family: 'GT America Mono';
+  src: url("./../assets/fonts/GT-America-Mono-Light.otf");
+}
+@font-face {
+  font-family: 'GT America Mono Italic';
+  src: url("./../assets/fonts/GT-America-Mono-Light-Italic.otf");
+  font-style: italic;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+}
+.rememory {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.rememory-hdr {
+  display: block;
+  width: 70%;
+  margin-top: 30px;
+  padding-left: 20px;
+  color: #00f;
+  font-family: 'PullmanLayerOT', 'Helvetica', 'Arial', sans-serif;
+  font-size: 45px;
+  font-weight: 200;
+  line-height: 1em;
+}
+@media (max-width: 620px) {
+  .rememory-hdr {
+    font-size: 30px;
+  }
+}
+.rememory-sec {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+.rememory-sec__item {
+  display: block;
+  position: relative;
+  height: 76vh;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 400px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #00f;
+}
+@media (max-width: 1180px) {
+  .rememory-sec__item {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin: 20px 0;
+  }
+}
+@media (max-width: 620px) {
+  .rememory-sec__item {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.rememory-sec__item:nth-child(odd) .rememory-sec__img {
+  top: 30%;
+}
+.rememory-sec__item:nth-child(even) .rememory-sec__img {
+  top: 70%;
+}
+.rememory-sec__link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #00f;
+  text-decoration: none;
+}
+.rememory-sec__wrap {
+  display: block;
+  position: relative;
+  padding: 0 20px;
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rememory-sec__wrap p:last-of-type {
+  margin-bottom: 0;
+}
+.rememory-sec__title {
+  font-family: 'GT America Mono', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+.rememory-sec__par {
+  font-family: 'GT America Mono', 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.2em;
+  text-align: justify;
+}
+.rememory-sec__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: auto;
+  max-width: 70%;
+  max-height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.rememory-nav {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.rememory-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.rememory-nav__list-item {
+  margin: 0;
+  color: #00f;
+  font-family: 'GT America Mono', 'Courier New', monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+@media (max-width: 620px) {
+  .rememory-nav__list-item {
+    font-size: 12px;
+  }
+}
+.rememory-nav__list-item a {
+  text-decoration: none;
+  -webkit-transition: 0.25s linear;
+  transition: 0.25s linear;
+}
+.rememory-nav__list-item a:active,
+.rememory-nav__list-item a:visited {
+  color: #00f;
+}
+.rememory-nav__list-item a:hover {
+  text-decoration: underline;
+}
+.mem {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  overflow-x: hidden;
+}
+.mem-vid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  min-height: 100vh;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+}
+.mem-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: 'GT America Mono', 'Courier New', monospace;
+  text-align: center;
+}
+.mem-form__label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.mem-form__txtarea {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  border: 0 solid transparent;
+  border-bottom: 3px solid #fff;
+  font-size: 1em;
+  color: #fff;
+  background: transparent;
+}
+.mem-form__btn {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  padding-top: 40px;
+  color: #fff;
+  font-family: 'GT America Mono', 'Courier New', monospace;
+  font-size: 24px;
+}
+.mem-form__btn:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */
